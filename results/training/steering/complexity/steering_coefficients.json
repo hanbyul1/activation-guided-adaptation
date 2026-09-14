@@ -1,0 +1,23 @@
+{
+  "baseline": "learned_inference_time_activation_steering",
+  "property": "complexity",
+  "selected_layers": [
+    23,
+    22,
+    12,
+    14
+  ],
+  "pooling": "last-token",
+  "equation": "h_prime = h + alpha_l * (centroid_l - h)",
+  "coefficients": {
+    "23": 0.034756727516651154,
+    "22": 0.035512525588274,
+    "12": 0.060769226402044296,
+    "14": 0.05844557285308838
+  },
+  "best_epoch": 3,
+  "best_validation_total_loss": 5201.284236711666,
+  "centroid_file": "outputs/activation_centroids/property_centroids.pt",
+  "centroid_file_sha256": "5f00f0f121a1359d1e6d99d72a9e1752a0d607020759a024a6586af6ed908c53",
+  "base_model": "bigcode/starcoderbase-1b"
+}
