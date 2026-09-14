@@ -1,0 +1,9 @@
+# Large generated PyTorch artifacts
+data/activation_centroids/all_layer_activations.pt
+data/activation_centroids/selected_layer_activations.pt
+data/prepared_swebench/prepared_dataset.pt
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store

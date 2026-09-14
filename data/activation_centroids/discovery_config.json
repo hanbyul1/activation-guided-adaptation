@@ -1,0 +1,21 @@
+{
+  "prepared_cache": "outputs/prepared_swebench/prepared_dataset.pt",
+  "prepared_cache_sha256": "095a05b613b1b7230ef444dcdb542b4aae1ffd588be3e47ecfff85025d86f2bd",
+  "model_name": "bigcode/starcoderbase-1b",
+  "device": "mps",
+  "model_dtype": "float32",
+  "storage_dtype": "float32",
+  "batch_size": 1,
+  "pooling": "last-token",
+  "top_k_layers": 4,
+  "probe_validation_fraction": 0.2,
+  "minimum_balanced_accuracy": 0.55,
+  "probe_max_iter": 2000,
+  "class_weight": "balanced",
+  "skip_second_pass": false,
+  "adaptation_instance_count": 1475,
+  "layer_count": 24,
+  "layer_numbering": "zero-based transformer block output",
+  "seed": 42,
+  "script_sha256": "e96a689c8f5957c7410e032cf3944af49bfe865cae146ba9e0e7cd14cc1f2216"
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_name": "princeton-nlp/SWE-bench",
+  "dataset_config": null,
+  "dataset_revision": null,
+  "source_split": "test",
+  "model_name": "bigcode/starcoderbase-1b",
+  "max_input_length": 4096,
+  "max_target_length": 2048,
+  "validation_fraction": 0.1,
+  "test_fraction": 0.1,
+  "seed": 42,
+  "include_unparseable": false,
+  "script_sha256": "d577538c02f6776876e5009df4357882303af9b5a1ef796c37c88dc535b7b0ad"
+}

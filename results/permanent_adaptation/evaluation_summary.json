@@ -1,0 +1,497 @@
+{
+  "summary": {
+    "complexity": {
+      "property": "complexity",
+      "output_positive_rate_pretrained": 0.0,
+      "output_positive_rate_merged": 0.0,
+      "output_rate_change": 0.0,
+      "output_improved": false,
+      "centroid_distance_pretrained": 36.144324752446764,
+      "centroid_distance_merged": 53.94610080718994,
+      "cosine_similarity_pretrained": 0.9129554919621631,
+      "cosine_similarity_merged": 0.9369949773155354,
+      "activation_improved": false,
+      "reference_patch_nll_pretrained": 0.9411237550652191,
+      "reference_patch_nll_merged": 0.8985217240195903,
+      "relative_nll_change": -0.045267193412492794,
+      "capability_tolerance": 0.05,
+      "capability_preserved": true,
+      "permanent_adaptation_supported": false
+    },
+    "coupling": {
+      "property": "coupling",
+      "output_positive_rate_pretrained": 0.0,
+      "output_positive_rate_merged": 0.02702702702702703,
+      "output_rate_change": 0.02702702702702703,
+      "output_improved": true,
+      "centroid_distance_pretrained": 7.214084202534444,
+      "centroid_distance_merged": 2.690478382561658,
+      "cosine_similarity_pretrained": 0.8783077775223835,
+      "cosine_similarity_merged": 0.9521862113797988,
+      "activation_improved": true,
+      "reference_patch_nll_pretrained": 0.9411237550652191,
+      "reference_patch_nll_merged": 0.90141058674868,
+      "relative_nll_change": -0.04219760483443216,
+      "capability_tolerance": 0.05,
+      "capability_preserved": true,
+      "permanent_adaptation_supported": true
+    },
+    "modularity": {
+      "property": "modularity",
+      "output_positive_rate_pretrained": 0.010810810810810811,
+      "output_positive_rate_merged": 0.05405405405405406,
+      "output_rate_change": 0.043243243243243246,
+      "output_improved": true,
+      "centroid_distance_pretrained": 20.85545066885046,
+      "centroid_distance_merged": 3.101010463849918,
+      "cosine_similarity_pretrained": 0.9004371538657594,
+      "cosine_similarity_merged": 0.9954004730727222,
+      "activation_improved": true,
+      "reference_patch_nll_pretrained": 0.9411237550652191,
+      "reference_patch_nll_merged": 0.9578657329761826,
+      "relative_nll_change": 0.017789347916102004,
+      "capability_tolerance": 0.05,
+      "capability_preserved": true,
+      "permanent_adaptation_supported": true
+    },
+    "interpretation": {
+      "structural_condition": "Each evaluated adapted model is loaded directly from its merged-model directory through AutoModelForCausalLM; PEFT and runtime activation intervention are not used.",
+      "decision_rule": "Permanent adaptation is supported for a property only when its merged model increases the corresponding generated-output positive rate, decreases mean centroid distance while increasing mean cosine similarity, and keeps reference-patch NLL degradation within the configured tolerance.",
+      "capability_metric_limitation": "Reference-patch NLL/perplexity is a lightweight preservation proxy. It does not replace official container-based SWE-bench resolved-rate evaluation."
+    }
+  },
+  "baseline": {
+    "model": "pretrained",
+    "output_metrics": {
+      "instance_count": 185,
+      "parseable_output_count": 41,
+      "parseable_output_rate": 0.22162162162162163,
+      "mean_generated_fragment_count": 0.745945945945946,
+      "positive_counts": {
+        "complexity": 0,
+        "coupling": 0,
+        "modularity": 2
+      },
+      "positive_rates": {
+        "complexity": 0.0,
+        "coupling": 0.0,
+        "modularity": 0.010810810810810811
+      }
+    },
+    "activation_metrics": {
+      "complexity": {
+        "all": {
+          "23": {
+            "count": 185,
+            "centroid_distance": 78.40113552196605,
+            "cosine_similarity": 0.9370584792784742,
+            "activation_norm": 308.3231097247149
+          },
+          "22": {
+            "count": 185,
+            "centroid_distance": 38.327456922788876,
+            "cosine_similarity": 0.9302065864104677,
+            "activation_norm": 124.77999498521959
+          },
+          "12": {
+            "count": 185,
+            "centroid_distance": 12.505731531091639,
+            "cosine_similarity": 0.893998873173385,
+            "activation_norm": 30.475947498630834
+          },
+          "14": {
+            "count": 185,
+            "centroid_distance": 15.342975033940496,
+            "cosine_similarity": 0.8905580289863252,
+            "activation_norm": 36.6979686118461
+          }
+        },
+        "positive_reference": {
+          "23": {
+            "count": 22,
+            "centroid_distance": 90.46686952764338,
+            "cosine_similarity": 0.8972847637805071,
+            "activation_norm": 302.52842018821025
+          },
+          "22": {
+            "count": 22,
+            "centroid_distance": 43.30433481389826,
+            "cosine_similarity": 0.8940143950114195,
+            "activation_norm": 122.69915563409978
+          },
+          "12": {
+            "count": 22,
+            "centroid_distance": 13.943942590193315,
+            "cosine_similarity": 0.8663373100148006,
+            "activation_norm": 30.785725940357555
+          },
+          "14": {
+            "count": 22,
+            "centroid_distance": 16.931476202878084,
+            "cosine_similarity": 0.8630261939357627,
+            "activation_norm": 36.9568398215554
+          }
+        }
+      },
+      "coupling": {
+        "all": {
+          "1": {
+            "count": 185,
+            "centroid_distance": 4.497523124797924,
+            "cosine_similarity": 0.8625025773370588,
+            "activation_norm": 9.29351903039056
+          },
+          "10": {
+            "count": 185,
+            "centroid_distance": 9.930645280270964,
+            "cosine_similarity": 0.8941129777077083,
+            "activation_norm": 24.17061184032543
+          }
+        },
+        "positive_reference": {
+          "1": {
+            "count": 24,
+            "centroid_distance": 4.9292866587638855,
+            "cosine_similarity": 0.8328338110198578,
+            "activation_norm": 9.39418343702952
+          },
+          "10": {
+            "count": 24,
+            "centroid_distance": 10.543224930763245,
+            "cosine_similarity": 0.8826418360695243,
+            "activation_norm": 24.19168980916341
+          }
+        }
+      },
+      "modularity": {
+        "all": {
+          "12": {
+            "count": 185,
+            "centroid_distance": 12.485854819014266,
+            "cosine_similarity": 0.8944837182961606,
+            "activation_norm": 30.475947498630834
+          },
+          "17": {
+            "count": 185,
+            "centroid_distance": 20.824097860181652,
+            "cosine_similarity": 0.9008972419878921,
+            "activation_norm": 53.13342905817805
+          },
+          "19": {
+            "count": 185,
+            "centroid_distance": 26.457867483190586,
+            "cosine_similarity": 0.9038479438303291,
+            "activation_norm": 68.21695028769004
+          },
+          "18": {
+            "count": 185,
+            "centroid_distance": 23.653982513015336,
+            "cosine_similarity": 0.902519711348656,
+            "activation_norm": 60.62096656593116
+          }
+        },
+        "positive_reference": {
+          "12": {
+            "count": 44,
+            "centroid_distance": 13.156251430511475,
+            "cosine_similarity": 0.8781135889108885,
+            "activation_norm": 30.4248929457231
+          },
+          "17": {
+            "count": 44,
+            "centroid_distance": 22.044588392431084,
+            "cosine_similarity": 0.8847116632387042,
+            "activation_norm": 53.57978066531095
+          },
+          "19": {
+            "count": 44,
+            "centroid_distance": 27.863064202395353,
+            "cosine_similarity": 0.8875878357582472,
+            "activation_norm": 68.66764224659313
+          },
+          "18": {
+            "count": 44,
+            "centroid_distance": 24.93674677068537,
+            "cosine_similarity": 0.8867859991521321,
+            "activation_norm": 61.08860492706299
+          }
+        }
+      }
+    },
+    "capability_metrics": {
+      "token_count": 117834,
+      "mean_reference_patch_nll": 0.9411237550652191,
+      "reference_patch_perplexity": 2.5628598274254757
+    },
+    "prediction_file": "outputs/activation_guided_evaluation/predictions/pretrained.jsonl"
+  },
+  "adapted_models": {
+    "complexity": {
+      "model": "complexity_merged",
+      "output_metrics": {
+        "instance_count": 185,
+        "parseable_output_count": 0,
+        "parseable_output_rate": 0.0,
+        "mean_generated_fragment_count": 0.0,
+        "positive_counts": {
+          "complexity": 0,
+          "coupling": 0,
+          "modularity": 0
+        },
+        "positive_rates": {
+          "complexity": 0.0,
+          "coupling": 0.0,
+          "modularity": 0.0
+        }
+      },
+      "activation_metrics": {
+        "complexity": {
+          "all": {
+            "23": {
+              "count": 185,
+              "centroid_distance": 173.0911703573691,
+              "cosine_similarity": 0.9764012420499647,
+              "activation_norm": 443.3993672138936
+            },
+            "22": {
+              "count": 185,
+              "centroid_distance": 16.878828662150614,
+              "cosine_similarity": 0.9862048712936607,
+              "activation_norm": 116.37119874696474
+            },
+            "12": {
+              "count": 185,
+              "centroid_distance": 12.024237447171599,
+              "cosine_similarity": 0.88680000957605,
+              "activation_norm": 23.66367712278624
+            },
+            "14": {
+              "count": 185,
+              "centroid_distance": 13.790166762068464,
+              "cosine_similarity": 0.8985737863424662,
+              "activation_norm": 27.72392534823031
+            }
+          },
+          "positive_reference": {
+            "23": {
+              "count": 22,
+              "centroid_distance": 173.5115765658292,
+              "cosine_similarity": 0.9734257540919564,
+              "activation_norm": 441.4674724232067
+            },
+            "22": {
+              "count": 22,
+              "centroid_distance": 21.496613589200106,
+              "cosine_similarity": 0.9590124514969912,
+              "activation_norm": 114.90000187266956
+            },
+            "12": {
+              "count": 22,
+              "centroid_distance": 13.23815935308283,
+              "cosine_similarity": 0.8592013797976754,
+              "activation_norm": 24.272703170776367
+            },
+            "14": {
+              "count": 22,
+              "centroid_distance": 15.098921992562033,
+              "cosine_similarity": 0.8722321702675386,
+              "activation_norm": 28.38073036887429
+            }
+          }
+        }
+      },
+      "capability_metrics": {
+        "token_count": 117834,
+        "mean_reference_patch_nll": 0.8985217240195903,
+        "reference_patch_perplexity": 2.4559698251177777
+      },
+      "prediction_file": "outputs/activation_guided_evaluation/predictions/complexity_merged.jsonl"
+    },
+    "coupling": {
+      "model": "coupling_merged",
+      "output_metrics": {
+        "instance_count": 185,
+        "parseable_output_count": 160,
+        "parseable_output_rate": 0.8648648648648649,
+        "mean_generated_fragment_count": 4.27027027027027,
+        "positive_counts": {
+          "complexity": 2,
+          "coupling": 5,
+          "modularity": 9
+        },
+        "positive_rates": {
+          "complexity": 0.010810810810810811,
+          "coupling": 0.02702702702702703,
+          "modularity": 0.04864864864864865
+        }
+      },
+      "activation_metrics": {
+        "coupling": {
+          "all": {
+            "1": {
+              "count": 185,
+              "centroid_distance": 2.74219132951788,
+              "cosine_similarity": 0.9228286448362711,
+              "activation_norm": 8.044721430701179
+            },
+            "10": {
+              "count": 185,
+              "centroid_distance": 2.638765435605436,
+              "cosine_similarity": 0.9815437779233263,
+              "activation_norm": 20.930765688097154
+            }
+          },
+          "positive_reference": {
+            "1": {
+              "count": 24,
+              "centroid_distance": 3.4335081974665322,
+              "cosine_similarity": 0.8838814732929071,
+              "activation_norm": 8.246780812740326
+            },
+            "10": {
+              "count": 24,
+              "centroid_distance": 3.8263912051916122,
+              "cosine_similarity": 0.9572727270424366,
+              "activation_norm": 21.35672990481059
+            }
+          }
+        }
+      },
+      "capability_metrics": {
+        "token_count": 117834,
+        "mean_reference_patch_nll": 0.90141058674868,
+        "reference_patch_perplexity": 2.4630750428673003
+      },
+      "prediction_file": "outputs/activation_guided_evaluation/predictions/coupling_merged.jsonl"
+    },
+    "modularity": {
+      "model": "modularity_merged",
+      "output_metrics": {
+        "instance_count": 185,
+        "parseable_output_count": 159,
+        "parseable_output_rate": 0.8594594594594595,
+        "mean_generated_fragment_count": 4.589189189189189,
+        "positive_counts": {
+          "complexity": 1,
+          "coupling": 2,
+          "modularity": 10
+        },
+        "positive_rates": {
+          "complexity": 0.005405405405405406,
+          "coupling": 0.010810810810810811,
+          "modularity": 0.05405405405405406
+        }
+      },
+      "activation_metrics": {
+        "modularity": {
+          "all": {
+            "12": {
+              "count": 185,
+              "centroid_distance": 3.6967085864092852,
+              "cosine_similarity": 0.9882261827185347,
+              "activation_norm": 25.730024739858266
+            },
+            "17": {
+              "count": 185,
+              "centroid_distance": 3.132089296547142,
+              "cosine_similarity": 0.9969760727238011,
+              "activation_norm": 46.64560115917309
+            },
+            "19": {
+              "count": 185,
+              "centroid_distance": 2.7444294053155023,
+              "cosine_similarity": 0.9984206402623975,
+              "activation_norm": 60.21299298260663
+            },
+            "18": {
+              "count": 185,
+              "centroid_distance": 2.830814567127743,
+              "cosine_similarity": 0.9979789965861553,
+              "activation_norm": 53.23551474906303
+            }
+          },
+          "positive_reference": {
+            "12": {
+              "count": 44,
+              "centroid_distance": 4.095505600625819,
+              "cosine_similarity": 0.9834185432304036,
+              "activation_norm": 25.680706197565254
+            },
+            "17": {
+              "count": 44,
+              "centroid_distance": 3.5988634445450525,
+              "cosine_similarity": 0.99498096650297,
+              "activation_norm": 46.538667765530676
+            },
+            "19": {
+              "count": 44,
+              "centroid_distance": 3.2631752599369395,
+              "cosine_similarity": 0.9971237060698596,
+              "activation_norm": 60.083147915926844
+            },
+            "18": {
+              "count": 44,
+              "centroid_distance": 3.329674639485099,
+              "cosine_similarity": 0.9963942021131516,
+              "activation_norm": 53.12548984180797
+            }
+          }
+        }
+      },
+      "capability_metrics": {
+        "token_count": 117834,
+        "mean_reference_patch_nll": 0.9578657329761826,
+        "reference_patch_perplexity": 2.6061283597979257
+      },
+      "prediction_file": "outputs/activation_guided_evaluation/predictions/modularity_merged.jsonl"
+    }
+  },
+  "config": {
+    "prepared_cache": "outputs/prepared_swebench/prepared_dataset.pt",
+    "prepared_cache_sha256": "095a05b613b1b7230ef444dcdb542b4aae1ffd588be3e47ecfff85025d86f2bd",
+    "centroid_file": "outputs/activation_centroids/property_centroids.pt",
+    "centroid_file_sha256": "5f00f0f121a1359d1e6d99d72a9e1752a0d607020759a024a6586af6ed908c53",
+    "labeling_script": "prepare_dataset_and_labels.py",
+    "labeling_script_sha256": "d577538c02f6776876e5009df4357882303af9b5a1ef796c37c88dc535b7b0ad",
+    "base_model": "bigcode/starcoderbase-1b",
+    "merged_models": {
+      "complexity": "outputs/lora_complexity_v4_1536/merged_model",
+      "coupling": "outputs/lora_coupling_v4_1536/merged_model",
+      "modularity": "outputs/lora_modularity_v4_1536/merged_model"
+    },
+    "split": "test",
+    "instance_count": 185,
+    "pooling": "last-token",
+    "selected_layers": {
+      "coupling": [
+        1,
+        10
+      ],
+      "complexity": [
+        23,
+        22,
+        12,
+        14
+      ],
+      "modularity": [
+        12,
+        17,
+        19,
+        18
+      ]
+    },
+    "device": "mps",
+    "dtype": "float32",
+    "batch_size": 1,
+    "max_new_tokens": 512,
+    "max_sequence_length": 1536,
+    "do_sample": false,
+    "temperature": null,
+    "top_p": null,
+    "capability_tolerance": 0.05,
+    "runtime_activation_intervention": false,
+    "peft_loaded_during_evaluation": false,
+    "seed": 42,
+    "script_sha256": "59a2283e13e6a2f9c5e83746bb5fc2e811fb140febdc4725f71bc4de2151c67d"
+  }
+}

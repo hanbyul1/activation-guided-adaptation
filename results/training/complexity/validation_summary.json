@@ -1,0 +1,30 @@
+{
+  "property": "complexity",
+  "best_epoch": 3,
+  "best_validation_total_loss": 69.39368581262391,
+  "best_validation_metrics": {
+    "epoch": 3,
+    "split": "validation",
+    "instance_count": 185,
+    "positive_instance_count": 22,
+    "optimization_steps": 0,
+    "mean_total_loss": 69.39368581262391,
+    "mean_language_loss": 0.8968234412372112,
+    "mean_activation_loss": 68.49686221560917,
+    "mean_selected_layer_distance": 2.698312981064255,
+    "learning_rate": 0.0,
+    "elapsed_seconds": 146.2452108860016
+  },
+  "selected_layers": [
+    23,
+    22,
+    12,
+    14
+  ],
+  "activation_extraction": "selected-layer-forward-hooks",
+  "language_modeling_objective": "prompt-to-gold-patch",
+  "prompt_tokens_masked_from_lm_loss": true,
+  "max_sequence_length": 1536,
+  "adapter_directory": "outputs/lora_complexity_v4_1536/adapter",
+  "merged_model_directory": "outputs/lora_complexity_v4_1536/merged_model"
+}

@@ -1,0 +1,7 @@
+property,model,positive_count,instance_count,positive_rate,parseable_output_rate,change_from_pretrained
+complexity,pretrained,0,185,0.0,0.22162162162162163,0.0
+complexity,complexity_merged,0,185,0.0,0.0,0.0
+coupling,pretrained,0,185,0.0,0.22162162162162163,0.0
+coupling,coupling_merged,5,185,0.02702702702702703,0.8648648648648649,0.02702702702702703
+modularity,pretrained,2,185,0.010810810810810811,0.22162162162162163,0.0
+modularity,modularity_merged,10,185,0.05405405405405406,0.8594594594594595,0.043243243243243246

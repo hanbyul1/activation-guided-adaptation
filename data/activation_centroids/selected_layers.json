@@ -1,0 +1,41 @@
+{
+  "layer_numbering": "zero-based transformer block output",
+  "selected_layers": {
+    "coupling": [
+      1,
+      10
+    ],
+    "complexity": [
+      23,
+      22,
+      12,
+      14
+    ],
+    "modularity": [
+      12,
+      17,
+      19,
+      18
+    ]
+  },
+  "discovery": {
+    "coupling": {
+      "distinguishable_representation_found": true,
+      "qualifying_selected_layers": 2,
+      "selected_layer_count": 2,
+      "criterion": "At least one selected layer has probe balanced accuracy >= 0.550."
+    },
+    "complexity": {
+      "distinguishable_representation_found": true,
+      "qualifying_selected_layers": 4,
+      "selected_layer_count": 4,
+      "criterion": "At least one selected layer has probe balanced accuracy >= 0.550."
+    },
+    "modularity": {
+      "distinguishable_representation_found": true,
+      "qualifying_selected_layers": 4,
+      "selected_layer_count": 4,
+      "criterion": "At least one selected layer has probe balanced accuracy >= 0.550."
+    }
+  }
+}

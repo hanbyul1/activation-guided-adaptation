@@ -1,0 +1,28 @@
+{
+  "property": "coupling",
+  "best_epoch": 3,
+  "best_validation_total_loss": 5.587820200199211,
+  "best_validation_metrics": {
+    "epoch": 3,
+    "split": "validation",
+    "instance_count": 185,
+    "positive_instance_count": 24,
+    "optimization_steps": 0,
+    "mean_total_loss": 5.587820200199211,
+    "mean_language_loss": 0.8967718113314461,
+    "mean_activation_loss": 4.691048378557772,
+    "mean_selected_layer_distance": 0.4921628526739172,
+    "learning_rate": 0.0,
+    "elapsed_seconds": 104.71281099319458
+  },
+  "selected_layers": [
+    1,
+    10
+  ],
+  "activation_extraction": "selected-layer-forward-hooks",
+  "language_modeling_objective": "prompt-to-gold-patch",
+  "prompt_tokens_masked_from_lm_loss": true,
+  "max_sequence_length": 1536,
+  "adapter_directory": "outputs/lora_coupling_v4_1536/adapter",
+  "merged_model_directory": "outputs/lora_coupling_v4_1536/merged_model"
+}
