@@ -1,0 +1,537 @@
+{
+  "summary": {
+    "coupling": {
+      "property": "coupling",
+      "output_positive_rate_pretrained": 0.0,
+      "output_positive_rate_steering": 0.005405405405405406,
+      "output_rate_change": 0.005405405405405406,
+      "output_improved": true,
+      "centroid_distance_pretrained": 7.214084202534444,
+      "centroid_distance_steering": 6.555919993245924,
+      "cosine_similarity_pretrained": 0.8783077775223835,
+      "cosine_similarity_steering": 0.8934943258057575,
+      "activation_improved": true,
+      "reference_patch_nll_pretrained": 0.9411237550652191,
+      "reference_patch_nll_steering": 0.9443014024544224,
+      "relative_nll_change": 0.00337643946622422,
+      "capability_tolerance": 0.05,
+      "capability_preserved": true,
+      "activation_steering_supported": true
+    },
+    "complexity": {
+      "property": "complexity",
+      "output_positive_rate_pretrained": 0.0,
+      "output_positive_rate_steering": 0.005405405405405406,
+      "output_rate_change": 0.005405405405405406,
+      "output_improved": true,
+      "centroid_distance_pretrained": 36.144324752446764,
+      "centroid_distance_steering": 33.9946743559193,
+      "cosine_similarity_pretrained": 0.9129554919621631,
+      "cosine_similarity_steering": 0.9252953899671903,
+      "activation_improved": true,
+      "reference_patch_nll_pretrained": 0.9411237550652191,
+      "reference_patch_nll_steering": 0.9619430489858989,
+      "relative_nll_change": 0.02212173883469456,
+      "capability_tolerance": 0.05,
+      "capability_preserved": true,
+      "activation_steering_supported": true
+    },
+    "modularity": {
+      "property": "modularity",
+      "output_positive_rate_pretrained": 0.010810810810810811,
+      "output_positive_rate_steering": 0.02702702702702703,
+      "output_rate_change": 0.016216216216216217,
+      "output_improved": true,
+      "centroid_distance_pretrained": 20.85545066885046,
+      "centroid_distance_steering": 16.874902727797227,
+      "cosine_similarity_pretrained": 0.9004371538657594,
+      "cosine_similarity_steering": 0.9252462744385609,
+      "activation_improved": true,
+      "reference_patch_nll_pretrained": 0.9411237550652191,
+      "reference_patch_nll_steering": 0.9945295485053057,
+      "relative_nll_change": 0.05674683393406183,
+      "capability_tolerance": 0.05,
+      "capability_preserved": false,
+      "activation_steering_supported": false
+    },
+    "interpretation": {
+      "structural_condition": "Each steering condition uses the original frozen pretrained model and applies property-specific learned activation intervention at runtime.",
+      "decision_rule": "Steering is supported when output positive rate increases, mean centroid distance decreases while cosine similarity increases, and reference-patch NLL degradation remains within the configured tolerance.",
+      "comparison_scope": "This is a controlled baseline for runtime activation intervention, not a claim that the learned coefficient formulation represents all activation-engineering methods."
+    }
+  },
+  "baseline": {
+    "model": "pretrained",
+    "output_metrics": {
+      "instance_count": 185,
+      "parseable_output_count": 41,
+      "parseable_output_rate": 0.22162162162162163,
+      "mean_generated_fragment_count": 0.745945945945946,
+      "positive_counts": {
+        "complexity": 0,
+        "coupling": 0,
+        "modularity": 2
+      },
+      "positive_rates": {
+        "complexity": 0.0,
+        "coupling": 0.0,
+        "modularity": 0.010810810810810811
+      }
+    },
+    "activation_metrics": {
+      "coupling": {
+        "all": {
+          "1": {
+            "count": 185,
+            "centroid_distance": 4.497523124797924,
+            "cosine_similarity": 0.8625025773370588,
+            "activation_norm": 9.29351903039056
+          },
+          "10": {
+            "count": 185,
+            "centroid_distance": 9.930645280270964,
+            "cosine_similarity": 0.8941129777077083,
+            "activation_norm": 24.17061184032543
+          }
+        },
+        "positive_reference": {
+          "1": {
+            "count": 24,
+            "centroid_distance": 4.9292866587638855,
+            "cosine_similarity": 0.8328338110198578,
+            "activation_norm": 9.39418343702952
+          },
+          "10": {
+            "count": 24,
+            "centroid_distance": 10.543224930763245,
+            "cosine_similarity": 0.8826418360695243,
+            "activation_norm": 24.19168980916341
+          }
+        }
+      },
+      "complexity": {
+        "all": {
+          "23": {
+            "count": 185,
+            "centroid_distance": 78.40113552196605,
+            "cosine_similarity": 0.9370584792784742,
+            "activation_norm": 308.3231097247149
+          },
+          "22": {
+            "count": 185,
+            "centroid_distance": 38.327456922788876,
+            "cosine_similarity": 0.9302065864104677,
+            "activation_norm": 124.77999498521959
+          },
+          "12": {
+            "count": 185,
+            "centroid_distance": 12.505731531091639,
+            "cosine_similarity": 0.893998873173385,
+            "activation_norm": 30.475947498630834
+          },
+          "14": {
+            "count": 185,
+            "centroid_distance": 15.342975033940496,
+            "cosine_similarity": 0.8905580289863252,
+            "activation_norm": 36.6979686118461
+          }
+        },
+        "positive_reference": {
+          "23": {
+            "count": 22,
+            "centroid_distance": 90.46686952764338,
+            "cosine_similarity": 0.8972847637805071,
+            "activation_norm": 302.52842018821025
+          },
+          "22": {
+            "count": 22,
+            "centroid_distance": 43.30433481389826,
+            "cosine_similarity": 0.8940143950114195,
+            "activation_norm": 122.69915563409978
+          },
+          "12": {
+            "count": 22,
+            "centroid_distance": 13.943942590193315,
+            "cosine_similarity": 0.8663373100148006,
+            "activation_norm": 30.785725940357555
+          },
+          "14": {
+            "count": 22,
+            "centroid_distance": 16.931476202878084,
+            "cosine_similarity": 0.8630261939357627,
+            "activation_norm": 36.9568398215554
+          }
+        }
+      },
+      "modularity": {
+        "all": {
+          "12": {
+            "count": 185,
+            "centroid_distance": 12.485854819014266,
+            "cosine_similarity": 0.8944837182961606,
+            "activation_norm": 30.475947498630834
+          },
+          "17": {
+            "count": 185,
+            "centroid_distance": 20.824097860181652,
+            "cosine_similarity": 0.9008972419878921,
+            "activation_norm": 53.13342905817805
+          },
+          "19": {
+            "count": 185,
+            "centroid_distance": 26.457867483190586,
+            "cosine_similarity": 0.9038479438303291,
+            "activation_norm": 68.21695028769004
+          },
+          "18": {
+            "count": 185,
+            "centroid_distance": 23.653982513015336,
+            "cosine_similarity": 0.902519711348656,
+            "activation_norm": 60.62096656593116
+          }
+        },
+        "positive_reference": {
+          "12": {
+            "count": 44,
+            "centroid_distance": 13.156251430511475,
+            "cosine_similarity": 0.8781135889108885,
+            "activation_norm": 30.4248929457231
+          },
+          "17": {
+            "count": 44,
+            "centroid_distance": 22.044588392431084,
+            "cosine_similarity": 0.8847116632387042,
+            "activation_norm": 53.57978066531095
+          },
+          "19": {
+            "count": 44,
+            "centroid_distance": 27.863064202395353,
+            "cosine_similarity": 0.8875878357582472,
+            "activation_norm": 68.66764224659313
+          },
+          "18": {
+            "count": 44,
+            "centroid_distance": 24.93674677068537,
+            "cosine_similarity": 0.8867859991521321,
+            "activation_norm": 61.08860492706299
+          }
+        }
+      }
+    },
+    "capability_metrics": {
+      "token_count": 117834,
+      "mean_reference_patch_nll": 0.9411237550652191,
+      "reference_patch_perplexity": 2.5628598274254757
+    },
+    "prediction_file": "outputs/activation_steering_evaluation/predictions/pretrained.jsonl"
+  },
+  "steering_models": {
+    "coupling": {
+      "model": "coupling_activation_steering",
+      "output_metrics": {
+        "instance_count": 185,
+        "parseable_output_count": 32,
+        "parseable_output_rate": 0.17297297297297298,
+        "mean_generated_fragment_count": 0.6378378378378379,
+        "positive_counts": {
+          "complexity": 0,
+          "coupling": 1,
+          "modularity": 3
+        },
+        "positive_rates": {
+          "complexity": 0.0,
+          "coupling": 0.005405405405405406,
+          "modularity": 0.016216216216216217
+        }
+      },
+      "activation_metrics": {
+        "coupling": {
+          "all": {
+            "1": {
+              "count": 185,
+              "centroid_distance": 4.113850922197909,
+              "cosine_similarity": 0.8798624288391422,
+              "activation_norm": 9.091344199309479
+            },
+            "10": {
+              "count": 185,
+              "centroid_distance": 8.99798906429394,
+              "cosine_similarity": 0.9071262227723728,
+              "activation_norm": 23.516072762979043
+            }
+          },
+          "positive_reference": {
+            "1": {
+              "count": 24,
+              "centroid_distance": 4.5087818304697675,
+              "cosine_similarity": 0.8527308615545431,
+              "activation_norm": 9.164186914761862
+            },
+            "10": {
+              "count": 24,
+              "centroid_distance": 9.469284772872925,
+              "cosine_similarity": 0.8977647256106138,
+              "activation_norm": 23.482221364974976
+            }
+          }
+        }
+      },
+      "capability_metrics": {
+        "token_count": 117834,
+        "mean_reference_patch_nll": 0.9443014024544224,
+        "reference_patch_perplexity": 2.571016645146674
+      },
+      "prediction_file": "outputs/activation_steering_evaluation/predictions/coupling_activation_steering.jsonl"
+    },
+    "complexity": {
+      "model": "complexity_activation_steering",
+      "output_metrics": {
+        "instance_count": 185,
+        "parseable_output_count": 35,
+        "parseable_output_rate": 0.1891891891891892,
+        "mean_generated_fragment_count": 0.6216216216216216,
+        "positive_counts": {
+          "complexity": 1,
+          "coupling": 0,
+          "modularity": 1
+        },
+        "positive_rates": {
+          "complexity": 0.005405405405405406,
+          "coupling": 0.0,
+          "modularity": 0.005405405405405406
+        }
+      },
+      "activation_metrics": {
+        "complexity": {
+          "all": {
+            "23": {
+              "count": 185,
+              "centroid_distance": 75.15001090797219,
+              "cosine_similarity": 0.953086000439283,
+              "activation_norm": 322.365831447292
+            },
+            "22": {
+              "count": 185,
+              "centroid_distance": 35.33443179774929,
+              "cosine_similarity": 0.9373397345277104,
+              "activation_norm": 122.8354900875607
+            },
+            "12": {
+              "count": 185,
+              "centroid_distance": 11.74576794134604,
+              "cosine_similarity": 0.9033262877850919,
+              "activation_norm": 30.09346319662558
+            },
+            "14": {
+              "count": 185,
+              "centroid_distance": 13.748486776609678,
+              "cosine_similarity": 0.9074295371166757,
+              "activation_norm": 35.95311115367993
+            }
+          },
+          "positive_reference": {
+            "23": {
+              "count": 22,
+              "centroid_distance": 84.82662842490457,
+              "cosine_similarity": 0.9243069203062491,
+              "activation_norm": 317.4064386541193
+            },
+            "22": {
+              "count": 22,
+              "centroid_distance": 40.021483941511676,
+              "cosine_similarity": 0.9037221875041723,
+              "activation_norm": 121.01409149169922
+            },
+            "12": {
+              "count": 22,
+              "centroid_distance": 13.096580050208352,
+              "cosine_similarity": 0.8773648390038447,
+              "activation_norm": 30.340598019686613
+            },
+            "14": {
+              "count": 22,
+              "centroid_distance": 15.150509877638383,
+              "cosine_similarity": 0.8828336298465729,
+              "activation_norm": 36.082420349121094
+            }
+          }
+        }
+      },
+      "capability_metrics": {
+        "token_count": 117834,
+        "mean_reference_patch_nll": 0.9619430489858989,
+        "reference_patch_perplexity": 2.616776060952838
+      },
+      "prediction_file": "outputs/activation_steering_evaluation/predictions/complexity_activation_steering.jsonl"
+    },
+    "modularity": {
+      "model": "modularity_activation_steering",
+      "output_metrics": {
+        "instance_count": 185,
+        "parseable_output_count": 48,
+        "parseable_output_rate": 0.2594594594594595,
+        "mean_generated_fragment_count": 0.9027027027027027,
+        "positive_counts": {
+          "complexity": 2,
+          "coupling": 2,
+          "modularity": 5
+        },
+        "positive_rates": {
+          "complexity": 0.010810810810810811,
+          "coupling": 0.010810810810810811,
+          "modularity": 0.02702702702702703
+        }
+      },
+      "activation_metrics": {
+        "modularity": {
+          "all": {
+            "12": {
+              "count": 185,
+              "centroid_distance": 11.259036316742769,
+              "cosine_similarity": 0.9094468716733359,
+              "activation_norm": 29.856209028089367
+            },
+            "17": {
+              "count": 185,
+              "centroid_distance": 17.947838917294064,
+              "cosine_similarity": 0.9195748589731552,
+              "activation_norm": 51.34922953425227
+            },
+            "19": {
+              "count": 185,
+              "centroid_distance": 19.57390830065753,
+              "cosine_similarity": 0.9404802707401482,
+              "activation_norm": 64.97436166711756
+            },
+            "18": {
+              "count": 185,
+              "centroid_distance": 18.718827376494538,
+              "cosine_similarity": 0.9314830963676041,
+              "activation_norm": 57.961651590708136
+            }
+          },
+          "positive_reference": {
+            "12": {
+              "count": 44,
+              "centroid_distance": 11.863561955365268,
+              "cosine_similarity": 0.89478242600506,
+              "activation_norm": 29.769366177645598
+            },
+            "17": {
+              "count": 44,
+              "centroid_distance": 18.868715481324628,
+              "cosine_similarity": 0.9061469625342976,
+              "activation_norm": 51.67257742448287
+            },
+            "19": {
+              "count": 44,
+              "centroid_distance": 20.51045922799544,
+              "cosine_similarity": 0.9292786006223072,
+              "activation_norm": 65.1533991206776
+            },
+            "18": {
+              "count": 44,
+              "centroid_distance": 19.610098470341075,
+              "cosine_similarity": 0.9194728840481151,
+              "activation_norm": 58.22057914733887
+            }
+          }
+        }
+      },
+      "capability_metrics": {
+        "token_count": 117834,
+        "mean_reference_patch_nll": 0.9945295485053057,
+        "reference_patch_perplexity": 2.703452198934458
+      },
+      "prediction_file": "outputs/activation_steering_evaluation/predictions/modularity_activation_steering.jsonl"
+    }
+  },
+  "steering_coefficients": {
+    "complexity": {
+      "23": 0.034756727516651154,
+      "22": 0.035512525588274,
+      "12": 0.060769226402044296,
+      "14": 0.05844557285308838
+    },
+    "coupling": {
+      "1": 0.08530744165182114,
+      "10": 0.09096973389387131
+    },
+    "modularity": {
+      "12": 0.0982566699385643,
+      "17": 0.09833166748285294,
+      "19": 0.08275727182626724,
+      "18": 0.09277425706386566
+    }
+  },
+  "config": {
+    "baseline": "learned_inference_time_activation_steering",
+    "source_evaluation_script": "evaluate_activation_guided_model.py",
+    "source_evaluation_script_sha256": "59a2283e13e6a2f9c5e83746bb5fc2e811fb140febdc4725f71bc4de2151c67d",
+    "prepared_cache": "outputs/prepared_swebench/prepared_dataset.pt",
+    "prepared_cache_sha256": "095a05b613b1b7230ef444dcdb542b4aae1ffd588be3e47ecfff85025d86f2bd",
+    "centroid_file": "outputs/activation_centroids/property_centroids.pt",
+    "centroid_file_sha256": "5f00f0f121a1359d1e6d99d72a9e1752a0d607020759a024a6586af6ed908c53",
+    "labeling_script": "prepare_dataset_and_labels.py",
+    "labeling_script_sha256": "d577538c02f6776876e5009df4357882303af9b5a1ef796c37c88dc535b7b0ad",
+    "base_model": "bigcode/starcoderbase-1b",
+    "coefficient_files": {
+      "complexity": "outputs/steering_complexity/steering_coefficients.json",
+      "coupling": "outputs/steering_coupling/steering_coefficients.json",
+      "modularity": "outputs/steering_modularity/steering_coefficients.json"
+    },
+    "coefficients": {
+      "complexity": {
+        "23": 0.034756727516651154,
+        "22": 0.035512525588274,
+        "12": 0.060769226402044296,
+        "14": 0.05844557285308838
+      },
+      "coupling": {
+        "1": 0.08530744165182114,
+        "10": 0.09096973389387131
+      },
+      "modularity": {
+        "12": 0.0982566699385643,
+        "17": 0.09833166748285294,
+        "19": 0.08275727182626724,
+        "18": 0.09277425706386566
+      }
+    },
+    "split": "test",
+    "instance_count": 185,
+    "pooling": "last-token",
+    "selected_layers": {
+      "coupling": [
+        1,
+        10
+      ],
+      "complexity": [
+        23,
+        22,
+        12,
+        14
+      ],
+      "modularity": [
+        12,
+        17,
+        19,
+        18
+      ]
+    },
+    "runtime_activation_intervention": true,
+    "model_parameters_modified": false,
+    "steering_equation": "h_prime = h + alpha_l * (centroid_l - h)",
+    "device": "mps",
+    "dtype": "float32",
+    "batch_size": 1,
+    "max_new_tokens": 512,
+    "max_sequence_length": 1536,
+    "do_sample": false,
+    "temperature": null,
+    "top_p": null,
+    "capability_tolerance": 0.05,
+    "seed": 42,
+    "script_sha256": "2c7ef9d5d8df1d1e6d2195fba6ba5b5a0ae0d6f49c3030e2b201ddb823cf0d8b"
+  }
+}

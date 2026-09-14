@@ -1,0 +1,70 @@
+{
+  "baseline": "learned_inference_time_activation_steering",
+  "source_evaluation_script": "evaluate_activation_guided_model.py",
+  "source_evaluation_script_sha256": "59a2283e13e6a2f9c5e83746bb5fc2e811fb140febdc4725f71bc4de2151c67d",
+  "prepared_cache": "outputs/prepared_swebench/prepared_dataset.pt",
+  "prepared_cache_sha256": "095a05b613b1b7230ef444dcdb542b4aae1ffd588be3e47ecfff85025d86f2bd",
+  "centroid_file": "outputs/activation_centroids/property_centroids.pt",
+  "centroid_file_sha256": "5f00f0f121a1359d1e6d99d72a9e1752a0d607020759a024a6586af6ed908c53",
+  "labeling_script": "prepare_dataset_and_labels.py",
+  "labeling_script_sha256": "d577538c02f6776876e5009df4357882303af9b5a1ef796c37c88dc535b7b0ad",
+  "base_model": "bigcode/starcoderbase-1b",
+  "coefficient_files": {
+    "complexity": "outputs/steering_complexity/steering_coefficients.json",
+    "coupling": "outputs/steering_coupling/steering_coefficients.json",
+    "modularity": "outputs/steering_modularity/steering_coefficients.json"
+  },
+  "coefficients": {
+    "complexity": {
+      "23": 0.034756727516651154,
+      "22": 0.035512525588274,
+      "12": 0.060769226402044296,
+      "14": 0.05844557285308838
+    },
+    "coupling": {
+      "1": 0.08530744165182114,
+      "10": 0.09096973389387131
+    },
+    "modularity": {
+      "12": 0.0982566699385643,
+      "17": 0.09833166748285294,
+      "19": 0.08275727182626724,
+      "18": 0.09277425706386566
+    }
+  },
+  "split": "test",
+  "instance_count": 185,
+  "pooling": "last-token",
+  "selected_layers": {
+    "coupling": [
+      1,
+      10
+    ],
+    "complexity": [
+      23,
+      22,
+      12,
+      14
+    ],
+    "modularity": [
+      12,
+      17,
+      19,
+      18
+    ]
+  },
+  "runtime_activation_intervention": true,
+  "model_parameters_modified": false,
+  "steering_equation": "h_prime = h + alpha_l * (centroid_l - h)",
+  "device": "mps",
+  "dtype": "float32",
+  "batch_size": 1,
+  "max_new_tokens": 512,
+  "max_sequence_length": 1536,
+  "do_sample": false,
+  "temperature": null,
+  "top_p": null,
+  "capability_tolerance": 0.05,
+  "seed": 42,
+  "script_sha256": "2c7ef9d5d8df1d1e6d2195fba6ba5b5a0ae0d6f49c3030e2b201ddb823cf0d8b"
+}
